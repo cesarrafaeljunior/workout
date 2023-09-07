@@ -1,0 +1,57 @@
+.section_training{
+    width: 100%;
+    height: 100%;
+
+    margin-top: 2.5rem;
+    padding: 1rem 1rem 0 1rem;
+}
+
+.section_training > h2 {
+    border-bottom: solid 4px var(--colorIcons);
+    padding-bottom: 0.5rem;
+}
+
+.section_training > ul {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.section_training > ul > li {
+    position: relative;
+
+    margin-top: 2rem;
+}
+
+.section_training > ul > li > figure {
+    max-width: 400px;
+    max-height: 300px;
+}
+
+.section_training li > h3 {
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0.5rem;
+
+    font-size: var(--fontSubtitleSm);
+    font-weight: 900;
+}
+
+.section_training li > p {
+    display: none;
+}
+
+.section_training li > button {
+    display: none;
+}
+
+.section_training ul > button {
+    margin-top: 2rem;
+    align-self: center;
+}
+
