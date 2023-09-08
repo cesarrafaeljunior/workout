@@ -9,6 +9,10 @@ a,ul{
     list-style: none;
 }
 
+html{
+    scroll-behavior: smooth;
+  }
+
 :root{
 
     --colorPrimary: #332F3C;
