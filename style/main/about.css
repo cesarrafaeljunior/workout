@@ -4,7 +4,6 @@ main {
 
   margin-top: 2rem;
   padding: 1rem 1rem 0 1rem;
-
 }
 
 .section_about {
@@ -21,9 +20,19 @@ main {
   font-size: var(--fontSubtitleSm);
 }
 
-.section_about > picture {
+.box_picture {
+  width: 50%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.section_about picture {
   max-width: 250px;
-  max-height: 250px
+  max-height: 250px;
 }
 
 .box_about {
@@ -39,10 +48,6 @@ main {
   text-align: center;
 }
 
-.box_about > p {
-  margin-top: 1rem;
-}
-
 .box_about button {
   width: 130px;
   height: 40px;
@@ -51,31 +56,48 @@ main {
   margin-top: 2rem;
 }
 
-.about_cards{
+.about_cards {
   width: 100%;
   height: 100%;
-  
+
   display: none;
+  align-items: flex-end;
+  justify-content: flex-end;
 }
 
-.about_cards > ul{
+.about_cards > ul {
+  width: max-content;
+  height: 100%;
+
   display: flex;
   flex-direction: column;
+  align-self: flex-end;
   gap: 1rem;
 }
 
 .about_cards > ul > li {
+  width: 300px;
+  height: 180px;
 
-  width: 100%;
-  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
 
   padding: 1rem;
+
+  border-radius: 8px;
 
   background-color: var(--colorPrimary);
 }
 
-@media(min-width: 768px){
-  .section_about{
+.about_cards > ul > li:hover {
+  transition: linear 0.2s;
+  filter: brightness(1.5);
+}
+
+@media (min-width: 768px) {
+  .section_about {
     margin-top: 1rem;
 
     flex-direction: row;
@@ -91,8 +113,8 @@ main {
 
     align-self: flex-end;
   }
-  
-  .box_about{
+
+  .box_about {
     width: 50%;
     margin-top: 0;
 
@@ -111,8 +133,44 @@ main {
     font-size: 17px;
   }
 
-  .box_about button {  
-    width: 190px ;
+  .box_about button {
+    width: 190px;
     height: 60px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section_about {
+    justify-content: space-between;
+  }
+
+  .about_cards {
+    display: flex;
+  }
+
+  .box_about {
+    width: 40%;
+    height: 100%;
+
+     margin-bottom: 2rem;
+  }
+
+  .box_about h2{
+    margin-bottom: 3rem;
+  }
+
+  .box_about button{
+    margin-top: 2rem;
+  }
+
+  .box_picture {
+    width: 50%;
+  }
+
+  .section_about picture {
+    max-width: 100%;
+    max-height: 100%;
+
+    min-height: 100%;
   }
 }
