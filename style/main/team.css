@@ -55,3 +55,10 @@
 .section_team > ul > li >  button{
     display: none;
 }
+
+@media(min-width:768px){
+    .section_team > h2 {
+            margin: 0;
+    }
+    
+}

@@ -79,6 +79,9 @@ footer {
 }
 
 .section_newsletter > div {
+  width: 100%;
+  height: 100%;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -105,4 +108,24 @@ footer {
 
 .section_copyright p{
     color: var(--colorText);
+}
+
+@media(min-width: 768px){
+  .section_contacts {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .box_infos {
+    width: max-content;
+    gap: 2rem;
+    justify-content: flex-start;
+  }
+  .list_icons_socials{
+    width: max-content;
+    align-self: flex-end;
+    gap: 1.5rem;
+  }
+  .list_icons_socials > li .icon {
+    font-size: 1.5rem;
+  }
 }
