@@ -1,8 +1,108 @@
-footer{
-    width: 100%;
-    height: 100%;
+footer {
+  width: 100%;
+  height: 100%;
 
-    margin-top: 2rem;
+  margin-top: 2rem;
 
+  padding: 1rem;
+
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+}
+
+.section_contacts {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.list_icons_socials {
+  width: 100%;
+  height: 100%;
+
+  margin-top: 1rem;
+
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.list_icons_socials > li .icon {
+  background-color: var(--colorIcons);
+  font-size: 2rem;
+
+  padding: 0.3rem;
+
+  border-radius: 50%;
+}
+
+.box_infos {
+  width: 100%;
+  height: 100%;
+
+  margin-top: 1rem;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  gap:5rem;
+
+}
+
+.box_infos > section > nav > ul {
+  margin-top: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+.box_infos > section > h4 {
+  font-size: var(--fontSubtitleSm);
+  font-weight: bold;
+  color: var(--colorText);
+}
+
+.section_newsletter > h4 {
+  font-size: var(--fontSubtitleSm);
+  font-weight: bold;
+  color: var(--colorText);
+
+  margin-bottom: 1.5rem;
+}
+
+.section_newsletter > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.section_newsletter > div > input {
+  width: 100%;
+  height: 2.5rem;
+
+  text-align: center;
+  color: black;
+
+  outline: none;
+  border-radius: 10px;
+  border: var(--colorPrimary);
+}
+
+.section_copyright{
+    text-align: center;
     padding: 1rem;
+}
+
+.section_copyright p{
+    color: var(--colorText);
 }

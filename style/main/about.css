@@ -8,7 +8,7 @@ main {
 }
 
 .section_about h2 {
-  font-size: var(--fontParagraph);
+  font-size: var(--fontSubtitleSm);
 }
 
 .section_about {
@@ -43,4 +43,8 @@ main {
 
 .about_cards {
   display: none;
+}
+
+@media(min-width: 768px){
+  
 }
