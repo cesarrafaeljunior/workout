@@ -6,8 +6,13 @@
     <link rel="stylesheet" href="./style/reset.css" />
     <link rel="stylesheet" href="./style/global.css" />
     <link rel="stylesheet" href="./style/index.css" />
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap" rel="stylesheet">
     <!-- JavaScript -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script defer src="./index.js"></script>
     <link
       rel="shortcut icon"
       href="./assets/logo_icon.png"
@@ -22,21 +27,22 @@
           <source srcset="./assets/logo_mobile.png" media="(max-width: 1023px)">                         
           <img src="./assets/logo.png" alt="Logo workout">                     
         </picture>
-        <section class="nav_section">
+        <section class="nav_section hidden">
             <nav class="nav_header">
                 <ul>
-                  <li><p>Sobre</p></li>
-                  <li><p>Treinos</p></li>
-                  <li><p>Time</p></li>
-                  <li><p>Planos</p></li>
+                  <li><a>Sobre</a></li>
+                  <li><a>Treinos</a></li>
+                  <li><a>Time</a></li>
+                  <li><a>Planos</a></li>
                 </ul>
+                <i class="ph ph-x closeButton"></i>
               </nav>
               <div class="box_header_buttons">
                 <button class="btnSm btnBgSecundary">Entrar</button>
                 <button class="btnSm btnBgPrimary">Inscrever-se</button>
               </div>
         </section>
-        <i class="ph ph-list icon_menu"></i>
+        <i class="ph ph-list icon_menu" id="menu"></i>
       </header>
       <main>
         <section class="section_about">
@@ -82,12 +88,9 @@
               </figure>
               <h3>Corrida</h3>
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Impedit veniam tempora, optio molestiae dolorum accusamus.
-                Dolore maiores obcaecati dicta, ipsa omnis quas provident soluta
-                vel. Voluptatibus suscipit nobis dolor temporibus!
+                Prepare-se para acelerar! Nosso programa de treino de corrida é projetado para todos, desde iniciantes até corredores experientes. Melhore sua resistência, queime calorias e desfrute dos benefícios de um estilo de vida ativo. Venha correr conosco e descubra o poder das passadas firmes e consistentes.
               </p>
-              <button class="btnSm btnBgSecundary">Ver mais</button>
+              <button class="btnSm btnBgSecundary">Saiba mais</button>
             </li>
             <li>
               <figure>
@@ -98,12 +101,9 @@
               </figure>
               <h3>Elevação</h3>
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Impedit veniam tempora, optio molestiae dolorum accusamus.
-                Dolore maiores obcaecati dicta, ipsa omnis quas provident soluta
-                vel. Voluptatibus suscipit nobis dolor temporibus!
+                Ganhe força e esculpa seu corpo com nosso programa de treino de elevação. Seja você um iniciante ou um levantador experiente, nossos instrutores especializados o guiarão na jornada para alcançar seus objetivos de condicionamento físico. Levante pesos, construa músculos e sinta-se incrível.
               </p>
-              <button>Ver mais</button>
+              <button class="btnSm btnBgSecundary">Saiba mais</button>
             </li>
             <li>
               <figure>
@@ -111,13 +111,11 @@
               </figure>
               <h3>Yoga</h3>
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Impedit veniam tempora, optio molestiae dolorum accusamus.
-                Dolore maiores obcaecati dicta, ipsa omnis quas provident soluta
-                vel. Voluptatibus suscipit nobis dolor temporibus!
+                Encontre equilíbrio, flexibilidade e paz interior em nossas aulas de yoga. Esta prática milenar oferece uma fuga do estresse diário, fortalecendo seu corpo e mente. Junte-se a nós para explorar posturas revitalizantes, técnicas de respiração e meditação, e descubra o poder do yoga para transformar sua vida.
               </p>
-              <button>Ver mais</button>
+              <button class="btnSm btnBgSecundary">Saiba mais</button>
             </li>
+            <button class="btnSm btnBgSecundary">Saiba mais</button>
           </ul>
         </section>
         <section class="section_team">
@@ -132,12 +130,9 @@
                 <h4>Treinador</h4>
               </div>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
-                ex necessitatibus impedit recusandae assumenda quaerat maxime,
-                explicabo, veritatis pariatur minus vitae sequi amet id
-                exercitationem accusamus voluptate neque, placeat aspernatur!
+                Carlos Maciel, nosso treinador experiente, está pronto para ajudá-lo a alcançar seus objetivos fitness com orientação.
               </p>
-              <button>Ver mais</button>
+              <button class="btnSm btnBgSecundary">Ver mais</button>
             </li>
             <li>
               <figure>
@@ -148,12 +143,9 @@
                 <h4>Treinador</h4>
               </div>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
-                ex necessitatibus impedit recusandae assumenda quaerat maxime,
-                explicabo, veritatis pariatur minus vitae sequi amet id
-                exercitationem accusamus voluptate neque, placeat aspernatur!
+                Eduardo Gomez é o treinador que combina diversão e desafio para tornar cada treino uma experiência estimulante e motivadora.
               </p>
-              <button>Ver mais</button>
+              <button class="btnSm btnBgSecundary">Ver mais</button>
             </li>
             <li>
               <figure>
@@ -167,12 +159,9 @@
                 <h4>Treinadora</h4>
               </div>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
-                ex necessitatibus impedit recusandae assumenda quaerat maxime,
-                explicabo, veritatis pariatur minus vitae sequi amet id
-                exercitationem accusamus voluptate neque, placeat aspernatur!
+                Jéssica Miller é nossa instrutora de yoga dedicada a nutrir corpo e mente através de aulas que promovem equilíbrio e bem-estar.
               </p>
-              <button>Ver mais</button>
+              <button class="btnSm btnBgSecundary">Ver mais</button>
             </li>
             <li>
               <figure>
@@ -183,12 +172,9 @@
                 <h4>Professora</h4>
               </div>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
-                ex necessitatibus impedit recusandae assumenda quaerat maxime,
-                explicabo, veritatis pariatur minus vitae sequi amet id
-                exercitationem accusamus voluptate neque, placeat aspernatur!
+                Emily Gonçalvez é nossa professora de yoga altamente qualificada, dedicada a guiar você em uma jornada de equilíbrio.
               </p>
-              <button>Ver mais</button>
+              <button class="btnSm btnBgSecundary">Ver mais</button>
             </li>
           </ul>
         </section>
@@ -208,22 +194,22 @@
             <ul class="list_icons_socials">
               <li>
                 <figure>
-                  <i class="ph ph-facebook-logo icon"></i>
+                  <img src="./assets/icons/facebook.png" alt="">
                 </figure>
               </li>
               <li>
                 <figure>
-                  <i class="ph ph-instagram-logo icon"></i>
+                  <img src="./assets/icons/imstagram.png" alt="">
                 </figure>
               </li>
               <li>
                 <figure>
-                  <i class="ph ph-twitter-logo icon"></i>
+                  <img src="./assets/icons/twitter.png" alt="">
                 </figure>
               </li>
               <li>
                 <figure>
-                  <i class="ph ph-whatsapp-logo icon"></i>
+                  <img src="./assets/icons/whatsapp.png" alt="">
                 </figure>
               </li>
             </ul>
@@ -232,10 +218,10 @@
               <h4>Nav</h4>
               <nav>
                 <ul>
-                  <li>Sobre</li>
-                  <li>Treinos</li>
-                  <li>Time</li>
-                  <li>Planos</li>
+                  <li><a href="">Sobre</a></li>
+                  <li><a href="">Treinos</a></li>
+                  <li><a href="">Time</a></li>
+                  <li><a href="">Planos</a></li>
                 </ul>
               </nav>
             </section>
@@ -243,9 +229,9 @@
               <h4>Contato</h4>
               <nav>
                 <ul>
-                  <li>Sobre</li>
-                  <li>Suporte</li>
-                  <li>Contate-nos</li>
+                  <li><a href="">Sobre</a></li>
+                  <li><a href="">Suporte</a></li>
+                  <li><a href="">Contate-nos</a></li>
                 </ul>
               </nav>
             </section>

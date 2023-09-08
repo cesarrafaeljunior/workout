@@ -29,3 +29,24 @@
 .section_potential > div button:hover {
     background-color: var(--hoverSecundary);
 }
+
+@media(min-width:1024px){
+    .section_potential{
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        height: 300px;
+    }
+
+    .section_potential > h2 {
+        font-size: var(--fontTitle);
+    }
+
+    .section_potential > p {
+        width: 50%;
+    }
+
+}

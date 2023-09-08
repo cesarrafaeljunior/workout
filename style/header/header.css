@@ -25,12 +25,11 @@ header img {
   top: 0;
   right: 0;
 
-  height: 30%;
+  height: 50%;
 
   margin-top: 1rem;
   padding: 0 1rem;
 
-  visibility: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -39,26 +38,31 @@ header img {
 
   background-color: var(--colorIcons);
   border-radius: 10px 0 0 10px;
+
+  transition: linear 0.5s;
+
 }
 
 .nav_header > ul {
+
+  position: relative;
+
   width: 100%;
   height: 100%;
 
-  margin-top: 1.5rem;
+  margin-top: 2rem;
 
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
 
-.nav_header > ul > li > p{
+.nav_header > ul > li > a{
   color: var(--colorText);
   font-size: var(--fontSubtitleSm);
 }
 
 .box_header_buttons {
-  height: 100%;
   justify-self: flex-end;
 
   display: flex;
@@ -74,6 +78,7 @@ header img {
   color: white;
   font-size: 2rem;
 }
+
 
 @media (min-width: 768px) {
   header {
@@ -107,7 +112,15 @@ header img {
     flex-direction: row;
   }
 
+  .nav_header a {
+    font-size: 1.2rem;
+  }
+
   .icon_menu {
+    display: none;
+  }
+
+  .closeButton{
     display: none;
   }
 }
